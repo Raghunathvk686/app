@@ -1,6 +1,6 @@
 FROM nginx:latest
 
-ARG version=
+ARG version=12
 
 RUN   echo "$version" > /usr/share/nginx/html/index.html
 
