@@ -12,7 +12,8 @@ tools {
                  echo ${Version}
                  new_version=${current_version}
                  current_version=`cat Dockerfile | grep version= | cut -c 13-`
-                 sed -i "s/$current_version/$Version" Dockerfile
+                 sed -i "s/$current_version/$Version/g" Dockerfile
+                 cat Dockerfile
                 '''
             }
         }
